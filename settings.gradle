@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DoitPractice"
 include ':app'
-include ':ch06'
-include ':ch07'
+include ':ch06_view'
+include ':ch07_layout'
