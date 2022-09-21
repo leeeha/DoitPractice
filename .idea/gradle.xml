@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/ch06_view" />
             <option value="$PROJECT_DIR$/ch07_layout" />
             <option value="$PROJECT_DIR$/ch08_event" />
+            <option value="$PROJECT_DIR$/ch09_resource" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
