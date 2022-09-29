@@ -23,14 +23,20 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, 10)
         }
 
+        // 리사이클러뷰에 표시할 데이터 리스트 생성
         datas = savedInstanceState?.let {
             it.getStringArrayList("datas")?.toMutableList()
         } ?: mutableListOf()
 
-        val layoutManager = LinearLayoutManager(this)
+        // 레이아웃 매니저 지정
+        val layoutManager = LinearLayoutManager(this) // 기본적으로 VERTICAL
         binding.mainRecyclerView.layoutManager = layoutManager
+
+        // 어댑터 지정
         adapter = MyAdapter(datas)
         binding.mainRecyclerView.adapter = adapter
+
+        // 아이템 구분선 추가
         binding.mainRecyclerView.addItemDecoration(
             DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
         )
