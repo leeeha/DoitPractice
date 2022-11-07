@@ -22,6 +22,7 @@ class AddActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when(item.itemId){
+        // 사용자가 입력한 텍스트를 인텐트의 부가 데이터에 저장
         R.id.menu_add_save -> {
             val intent = intent
             intent.putExtra("result", binding.addEditView.text.toString())
@@ -31,5 +32,4 @@ class AddActivity : AppCompatActivity() {
         }
         else -> true
     }
-    
 }
