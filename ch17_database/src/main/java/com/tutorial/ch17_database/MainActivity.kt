@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         // 추가 버튼 누르면 AddActivity로 전환
         binding.mainFab.setOnClickListener {
             val intent = Intent(this, AddActivity::class.java)
-            startActivityForResult(intent, 10)
+            startActivityForResult(intent,10)
         }
 
         // 데이터베이스에서 가져온 데이터로 리사이클러뷰 초기화
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val cursor = db.rawQuery("select * from TODO_TB", null)
         cursor.run {
             while(moveToNext()){
-                datas?.add(cursor.getString(1))
+                datas?.add(cursor.getString(1)) // 할일 목록 추가
             }
         }
         db.close()
