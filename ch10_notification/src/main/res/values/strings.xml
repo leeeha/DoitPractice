@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ch10_notification</string>
+    <string name="channel_name">My Channel One</string>
+    <string name="channel_desc">My Channel One Description</string>
+    <string name="noti_content_title">이하은</string>
+    <string name="noti_content_text">지디엣씨 안드로이드 쵝오</string>
+    <string name="noti_reply_label">답장을 입력해주세요</string>
+    <string name="noti_action_title">답장</string>
 </resources>

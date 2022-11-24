@@ -11,14 +11,11 @@ import androidx.core.app.RemoteInput
 class ReplyReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        // 알림의 입력 글 획득
-        val replyText = RemoteInput.getResultsFromIntent(intent)
-                    ?.getCharSequence("key_text_reply")
+        val replyText = RemoteInput.getResultsFromIntent(intent)?.getCharSequence(KEY_TEXT_REPLY)
         Log.d("haeun", "reply text: $replyText")
 
-        // 알림 취소
         val manager = context.getSystemService(
             AppCompatActivity.NOTIFICATION_SERVICE) as NotificationManager
-        manager.cancel(1)
+        manager.cancel(NOTIFICATION_ID)
     }
 }
