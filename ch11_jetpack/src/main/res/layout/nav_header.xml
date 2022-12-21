@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:text="I am header"
+    android:textStyle="bold"
+    android:textSize="16sp"
+    android:textColor="#ffffff"
+    android:background="#0000ff"
+    android:gravity="left|bottom"
+    android:paddingBottom="32dp"
+    android:paddingLeft="32dp"
+    android:layout_height="200dp">
+</TextView>
