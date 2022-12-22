@@ -44,7 +44,7 @@ class MyDecoration(val context: Context): RecyclerView.ItemDecoration() {
         val width = parent.width
         val height = parent.height
 
-        // 이미지의 크기 계산
+        // 이미지의 크기 계산 (drawable의 크기를 구할 때는 intrinsic 너비와 높이 사용)
         val image = ResourcesCompat.getDrawable(context.resources, R.drawable.kbo, null)
         val imageWidth = image?.intrinsicWidth
         val imageHeight = image?.intrinsicHeight
@@ -53,7 +53,7 @@ class MyDecoration(val context: Context): RecyclerView.ItemDecoration() {
         val left = width / 2 - imageWidth?.div(2) as Int
         val top = height / 2 - imageHeight?.div(2) as Int
 
-        // 이미지 출력
+        // 원하는 위치에 이미지 출력
         canvas.drawBitmap(
             BitmapFactory.decodeResource(context.resources, R.drawable.kbo),
             left.toFloat(),
